@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace Windows_App
 {
-    public partial class Form1 : Form
+    public partial class frmHello : Form
     {
-        public Form1()
+        public frmHello()
         {
             InitializeComponent();
         }
 
+        private void frmHello_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
