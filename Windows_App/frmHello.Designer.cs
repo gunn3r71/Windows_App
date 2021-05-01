@@ -65,15 +65,15 @@ namespace Windows_App
             this.btnEnviar.TabIndex = 2;
             this.btnEnviar.Text = "Ok";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // lblRecebeOla
             // 
             this.lblRecebeOla.AutoSize = true;
             this.lblRecebeOla.Location = new System.Drawing.Point(93, 155);
             this.lblRecebeOla.Name = "lblRecebeOla";
-            this.lblRecebeOla.Size = new System.Drawing.Size(30, 14);
+            this.lblRecebeOla.Size = new System.Drawing.Size(0, 14);
             this.lblRecebeOla.TabIndex = 3;
-            this.lblRecebeOla.Text = "Olá, ";
             this.lblRecebeOla.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblRecebeOla.Visible = false;
             // 
@@ -83,16 +83,16 @@ namespace Windows_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(222, 228);
-            this.ControlBox = false;
             this.Controls.Add(this.lblRecebeOla);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmHello";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ok";
+            this.Text = "Say Hello";
             this.Load += new System.EventHandler(this.frmHello_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

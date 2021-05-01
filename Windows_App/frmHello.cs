@@ -21,5 +21,17 @@ namespace Windows_App
         {
             
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNome.Text))
+            {
+                lblRecebeOla.Text = $"Olá, {txtNome.Text}!";
+                lblRecebeOla.Show();
+            } else
+            {
+                MessageBox.Show("Informe um valor no input","Erro");
+            }
+        }
     }
 }
