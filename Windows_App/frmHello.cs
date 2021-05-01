@@ -14,13 +14,13 @@ namespace Windows_App
     {
         public FrmHello()
         {
-            MessageBox.Show("Primeiro objeto a ser mostrado");
+            //MessageBox.Show("Primeiro objeto a ser mostrado");
             InitializeComponent();
         }
 
         private void FrmHello_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Iniciando um form","Teste Hello");
+            //MessageBox.Show("Iniciando um form","Teste Hello");
         }
 
         private void BtnEnviar_Click(object sender, EventArgs e)
