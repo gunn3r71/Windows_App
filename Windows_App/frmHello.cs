@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Windows_App
 {
-    public partial class frmHello : Form
+    public partial class FrmHello : Form
     {
-        public frmHello()
+        public FrmHello()
         {
             InitializeComponent();
         }
 
-        private void frmHello_Load(object sender, EventArgs e)
+        private void FrmHello_Load(object sender, EventArgs e)
         {
             
         }
 
-        private void btnEnviar_Click(object sender, EventArgs e)
+        private void BtnEnviar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNome.Text))
             {
@@ -32,6 +32,12 @@ namespace Windows_App
             {
                 MessageBox.Show("Informe um valor no input","Erro");
             }
+        }
+
+        private void BtnNovaJanela_Click(object sender, EventArgs e)
+        {
+            var novoForm = new FrmNovoForm();
+            novoForm.Show();
         }
     }
 }
