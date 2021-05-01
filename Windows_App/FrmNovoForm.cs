@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Windows_App
@@ -17,6 +10,11 @@ namespace Windows_App
             InitializeComponent();
         }
 
+        public FrmNovoForm(string texto) : this()
+        {
+            this.lblMensagem.Text = texto;
+        }
+
         private void FrmNovoForm_Load(object sender, EventArgs e)
         {
 
@@ -25,6 +23,11 @@ namespace Windows_App
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblMensagem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

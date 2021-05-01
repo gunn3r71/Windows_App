@@ -42,6 +42,7 @@ namespace Windows_App
             this.lblMensagem.Size = new System.Drawing.Size(69, 15);
             this.lblMensagem.TabIndex = 0;
             this.lblMensagem.Text = "Nova janela";
+            this.lblMensagem.Click += new System.EventHandler(this.lblMensagem_Click);
             // 
             // btnVoltar
             // 
