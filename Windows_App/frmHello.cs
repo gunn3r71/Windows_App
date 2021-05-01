@@ -14,7 +14,7 @@ namespace Windows_App
     {
         public FrmHello()
         {
-            //MessageBox.Show("Primeiro objeto a ser mostrado");
+    
             InitializeComponent();
         }
 
