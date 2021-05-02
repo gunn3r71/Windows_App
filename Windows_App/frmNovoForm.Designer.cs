@@ -33,6 +33,9 @@ namespace Windows_App
             this.btnVoltar = new System.Windows.Forms.Button();
             this.CboStatusUsuario = new System.Windows.Forms.ComboBox();
             this.lblUserState = new System.Windows.Forms.Label();
+            this.dgvEstados = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensagem
@@ -47,9 +50,9 @@ namespace Windows_App
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(12, 194);
+            this.btnVoltar.Location = new System.Drawing.Point(12, 188);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(235, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(235, 29);
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.Text = "voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -72,11 +75,31 @@ namespace Windows_App
             this.lblUserState.TabIndex = 3;
             this.lblUserState.Text = "Selecione um status de usuário";
             // 
+            // dgvEstados
+            // 
+            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstados.Location = new System.Drawing.Point(335, 59);
+            this.dgvEstados.Name = "dgvEstados";
+            this.dgvEstados.RowTemplate.Height = 25;
+            this.dgvEstados.Size = new System.Drawing.Size(464, 196);
+            this.dgvEstados.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Meu GridView";
+            // 
             // FrmNovoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 229);
+            this.ClientSize = new System.Drawing.Size(811, 267);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvEstados);
             this.Controls.Add(this.lblUserState);
             this.Controls.Add(this.CboStatusUsuario);
             this.Controls.Add(this.btnVoltar);
@@ -85,6 +108,7 @@ namespace Windows_App
             this.Name = "FrmNovoForm";
             this.Text = "frmNovoForm";
             this.Load += new System.EventHandler(this.FrmNovoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,5 +120,7 @@ namespace Windows_App
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.ComboBox CboStatusUsuario;
         private System.Windows.Forms.Label lblUserState;
+        private System.Windows.Forms.DataGridView dgvEstados;
+        private System.Windows.Forms.Label label1;
     }
 }

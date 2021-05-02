@@ -8,17 +8,18 @@ namespace Windows_App.Classes
 {
     public class Estado
     {
-        private string Nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
 
         public static List<Estado> RetornaEstados()
         {
             return new List<Estado>
             {
-                new Estado { Nome = "SP" },
-                new Estado { Nome = "BA" },
-                new Estado { Nome = "MG" },
-                new Estado { Nome = "GO" },
-                new Estado { Nome = "RJ" }
+                new Estado { Id=1, Nome = "SP" },
+                new Estado { Id=2, Nome = "BA" },
+                new Estado { Id=3, Nome = "MG" },
+                new Estado { Id=4, Nome = "GO" },
+                new Estado { Id=5, Nome = "RJ" }
             };
         }
 
