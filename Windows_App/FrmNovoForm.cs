@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Windows_App.Classes;
 
@@ -22,22 +23,15 @@ namespace Windows_App
             this.CboStatusUsuario.DataSource = Estado.RetornaEstados();
             this.CboStatusUsuario.Text = "Selecione um estado";
 
-            //DataSource é a propriedade que recebe a collection no objeto
-            //this.dgvEstados.DataSource = Estado.RetornaEstados(); (*Pega todos as propriedades da sua propriedade e exibem*)
-            this.dgvEstados.ColumnCount = 2;
-            this.dgvEstados.Columns[0].Name = "Id";
-            this.dgvEstados.Columns[1].Name = "Nome";
-            var rows = new List<string[]>();
-            foreach(var estado in Estado.RetornaEstados())
-            {
-                rows.Add(new string[] { estado.Id.ToString(),estado.Nome});
-            }
-
-            foreach (var row in rows)
-            {
-                dgvEstados.Rows.Add(row);
-            }
-
+            var dados = from estado in Estado.RetornaEstados() //é como se fosse um foreach
+                        where estado.Id == 1 || estado.Id == 3 // Faz um filtro do objeto retornado
+                        orderby estado.Nome //Ordenando os dados por nome
+                        select new
+                        { //bloco que seleciona as propriedades que quero retornar
+                            Id = estado.Id,
+                            Name = estado.Nome
+                        };
+            dgvEstados.DataSource = dados.ToList(); //Transformando os dados retornados em lista e devolvendo
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
