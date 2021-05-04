@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using Windows_App.Classes;
 
 namespace Windows_App
 {
-    public partial class FrmNovoForm : Form
+    public partial class FrmPrincipal : Form
     {
-        public FrmNovoForm()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        public FrmNovoForm(string texto) : this()
+        public FrmPrincipal(string texto) : this()
         {
             this.lblMensagem.Text = texto;
         }
@@ -34,10 +35,25 @@ namespace Windows_App
             dgvEstados.DataSource = dados.ToList(); //Transformando os dados retornados em lista e devolvendo
         }
 
-        private void BtnVoltar_Click(object sender, EventArgs e)
+        private void SairMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Você deseja realmente sair?","Sair",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show("Muito obrigado por utilizar nossa aplicação!!!");
+                Application.Exit();
+            }
         }
 
+        private void NovoMenuItem_Click(object sender, EventArgs e)
+        {
+            var notepad = new FrmNotePad();
+            notepad.ShowDialog();
+        }
+        
+        private void ConteudoMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Implementando....");
+            //Process.Start("https://www.torneseumprogramador.com.br");
+        }
     }
 }
