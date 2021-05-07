@@ -29,6 +29,7 @@ namespace Windows_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.lblMensagem = new System.Windows.Forms.Label();
             this.CboStatusUsuario = new System.Windows.Forms.ComboBox();
@@ -46,6 +47,8 @@ namespace Windows_App
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TimerHoraAtual = new System.Windows.Forms.Timer(this.components);
+            this.lblHoraAtual = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
@@ -179,11 +182,26 @@ namespace Windows_App
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // TimerHoraAtual
+            // 
+            this.TimerHoraAtual.Interval = 1000;
+            this.TimerHoraAtual.Tick += new System.EventHandler(this.TimerHoraAtual_Tick);
+            // 
+            // lblHoraAtual
+            // 
+            this.lblHoraAtual.AutoSize = true;
+            this.lblHoraAtual.Location = new System.Drawing.Point(599, 9);
+            this.lblHoraAtual.Name = "lblHoraAtual";
+            this.lblHoraAtual.Size = new System.Drawing.Size(200, 15);
+            this.lblHoraAtual.TabIndex = 7;
+            this.lblHoraAtual.Text = "Data/Hora atual: 00/00/0000 00:00:00";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 267);
+            this.Controls.Add(this.lblHoraAtual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEstados);
             this.Controls.Add(this.lblUserState);
@@ -226,5 +244,7 @@ namespace Windows_App
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SairMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AjudaMenuItem;
+        private System.Windows.Forms.Timer TimerHoraAtual;
+        private System.Windows.Forms.Label lblHoraAtual;
     }
 }

@@ -12,6 +12,7 @@ namespace Windows_App
         public FrmPrincipal()
         {
             InitializeComponent();
+            TimerHoraAtual.Enabled = true;
         }
 
         public FrmPrincipal(string texto) : this()
@@ -54,6 +55,17 @@ namespace Windows_App
         {
             MessageBox.Show("Implementando....");
             //Process.Start("https://www.torneseumprogramador.com.br");
+        }
+
+        private void TimerHoraAtual_Tick(object sender, EventArgs e)
+        {
+            this.HoraAtual();
+        }
+
+        public void HoraAtual()
+        {
+            lblHoraAtual.Text = "Data/hora atual: "
+                    + DateTime.UtcNow.ToString(format: "dd/MM/yyyy - HH:mm:ss");
         }
     }
 }
