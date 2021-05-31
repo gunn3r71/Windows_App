@@ -49,6 +49,7 @@ namespace Windows_App
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimerHoraAtual = new System.Windows.Forms.Timer(this.components);
             this.lblHoraAtual = new System.Windows.Forms.Label();
+            this.CadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +103,8 @@ namespace Windows_App
             // 
             this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArquivoMenuItem,
-            this.AjudaMenuItem});
+            this.AjudaMenuItem,
+            this.CadastroMenuItem});
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(811, 24);
@@ -196,6 +198,13 @@ namespace Windows_App
             this.lblHoraAtual.TabIndex = 7;
             this.lblHoraAtual.Text = "Data/Hora atual: 00/00/0000 00:00:00";
             // 
+            // CadastroMenuItem
+            // 
+            this.CadastroMenuItem.Name = "CadastroMenuItem";
+            this.CadastroMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.CadastroMenuItem.Text = "Cadastro";
+            this.CadastroMenuItem.Click += new System.EventHandler(this.CadastroMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -246,5 +255,6 @@ namespace Windows_App
         private System.Windows.Forms.ToolStripMenuItem AjudaMenuItem;
         private System.Windows.Forms.Timer TimerHoraAtual;
         private System.Windows.Forms.Label lblHoraAtual;
+        private System.Windows.Forms.ToolStripMenuItem CadastroMenuItem;
     }
 }

@@ -67,5 +67,10 @@ namespace Windows_App
             lblHoraAtual.Text = "Data/hora atual: "
                     + DateTime.UtcNow.ToString(format: "dd/MM/yyyy - HH:mm:ss");
         }
+
+        private void CadastroMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

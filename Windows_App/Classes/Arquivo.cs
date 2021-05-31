@@ -12,7 +12,7 @@ namespace Windows_App.Classes
     {
         public string Nome { get; set; }
         public string Texto { get; set; }
-        public string Diretorio { get; private set; }
+        public string Diretorio { get; protected set; }
 
         public Arquivo()
         {
