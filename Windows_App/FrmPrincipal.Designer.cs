@@ -47,9 +47,10 @@ namespace Windows_App
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimerHoraAtual = new System.Windows.Forms.Timer(this.components);
             this.lblHoraAtual = new System.Windows.Forms.Label();
-            this.CadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Notify = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +110,7 @@ namespace Windows_App
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(811, 24);
             this.Menu.TabIndex = 6;
+            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClicked);
             // 
             // ArquivoMenuItem
             // 
@@ -184,6 +186,13 @@ namespace Windows_App
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // CadastroMenuItem
+            // 
+            this.CadastroMenuItem.Name = "CadastroMenuItem";
+            this.CadastroMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.CadastroMenuItem.Text = "Cadastro";
+            this.CadastroMenuItem.Click += new System.EventHandler(this.CadastroMenuItem_Click);
+            // 
             // TimerHoraAtual
             // 
             this.TimerHoraAtual.Interval = 1000;
@@ -198,12 +207,14 @@ namespace Windows_App
             this.lblHoraAtual.TabIndex = 7;
             this.lblHoraAtual.Text = "Data/Hora atual: 00/00/0000 00:00:00";
             // 
-            // CadastroMenuItem
+            // Notify
             // 
-            this.CadastroMenuItem.Name = "CadastroMenuItem";
-            this.CadastroMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.CadastroMenuItem.Text = "Cadastro";
-            this.CadastroMenuItem.Click += new System.EventHandler(this.CadastroMenuItem_Click);
+            this.Notify.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.Notify.Icon = ((System.Drawing.Icon)(resources.GetObject("Notify.Icon")));
+            this.Notify.Text = "Teste de notificação";
+            this.Notify.Visible = true;
+            this.Notify.Click += new System.EventHandler(this.Notify_Click);
+            this.Notify.DoubleClick += new System.EventHandler(this.Notify_DoubleClick);
             // 
             // FrmPrincipal
             // 
@@ -217,6 +228,7 @@ namespace Windows_App
             this.Controls.Add(this.CboStatusUsuario);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmPrincipal";
@@ -256,5 +268,6 @@ namespace Windows_App
         private System.Windows.Forms.Timer TimerHoraAtual;
         private System.Windows.Forms.Label lblHoraAtual;
         private System.Windows.Forms.ToolStripMenuItem CadastroMenuItem;
+        private System.Windows.Forms.NotifyIcon Notify;
     }
 }
