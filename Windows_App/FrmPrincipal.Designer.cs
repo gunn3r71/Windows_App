@@ -36,30 +36,17 @@ namespace Windows_App
             this.lblUserState = new System.Windows.Forms.Label();
             this.dgvEstados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Menu = new System.Windows.Forms.MenuStrip();
-            this.ArquivoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NovoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.SairMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AjudaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConteudoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimerHoraAtual = new System.Windows.Forms.Timer(this.components);
             this.lblHoraAtual = new System.Windows.Forms.Label();
             this.Notify = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
-            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblMensagem.Location = new System.Drawing.Point(12, 44);
+            this.lblMensagem.Location = new System.Drawing.Point(63, 32);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(67, 15);
             this.lblMensagem.TabIndex = 0;
@@ -85,7 +72,7 @@ namespace Windows_App
             // dgvEstados
             // 
             this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstados.Location = new System.Drawing.Point(335, 80);
+            this.dgvEstados.Location = new System.Drawing.Point(266, 62);
             this.dgvEstados.Name = "dgvEstados";
             this.dgvEstados.RowTemplate.Height = 25;
             this.dgvEstados.Size = new System.Drawing.Size(464, 175);
@@ -94,104 +81,11 @@ namespace Windows_App
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 44);
+            this.label1.Location = new System.Drawing.Point(337, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Meu GridView";
-            // 
-            // Menu
-            // 
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ArquivoMenuItem,
-            this.AjudaMenuItem,
-            this.CadastroMenuItem});
-            this.Menu.Location = new System.Drawing.Point(0, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(811, 24);
-            this.Menu.TabIndex = 6;
-            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClicked);
-            // 
-            // ArquivoMenuItem
-            // 
-            this.ArquivoMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NovoMenuItem,
-            this.toolStripSeparator,
-            this.SairMenuItem});
-            this.ArquivoMenuItem.Name = "ArquivoMenuItem";
-            this.ArquivoMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.ArquivoMenuItem.Text = "&Arquivo";
-            // 
-            // NovoMenuItem
-            // 
-            this.NovoMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NovoMenuItem.Image")));
-            this.NovoMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NovoMenuItem.Name = "NovoMenuItem";
-            this.NovoMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.NovoMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.NovoMenuItem.Text = "&Novo";
-            this.NovoMenuItem.Click += new System.EventHandler(this.NovoMenuItem_Click);
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
-            // 
-            // SairMenuItem
-            // 
-            this.SairMenuItem.Name = "SairMenuItem";
-            this.SairMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.SairMenuItem.Text = "&Sair";
-            this.SairMenuItem.Click += new System.EventHandler(this.SairMenuItem_Click);
-            // 
-            // AjudaMenuItem
-            // 
-            this.AjudaMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ConteudoMenuItem,
-            this.indexToolStripMenuItem,
-            this.searchToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.aboutToolStripMenuItem});
-            this.AjudaMenuItem.Name = "AjudaMenuItem";
-            this.AjudaMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.AjudaMenuItem.Text = "A&juda";
-            // 
-            // ConteudoMenuItem
-            // 
-            this.ConteudoMenuItem.Name = "ConteudoMenuItem";
-            this.ConteudoMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.ConteudoMenuItem.Text = "&Conteudo";
-            this.ConteudoMenuItem.Click += new System.EventHandler(this.ConteudoMenuItem_Click);
-            // 
-            // indexToolStripMenuItem
-            // 
-            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.indexToolStripMenuItem.Text = "&Index";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.searchToolStripMenuItem.Text = "&Search";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(124, 6);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // CadastroMenuItem
-            // 
-            this.CadastroMenuItem.Name = "CadastroMenuItem";
-            this.CadastroMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.CadastroMenuItem.Text = "Cadastro";
-            this.CadastroMenuItem.Click += new System.EventHandler(this.CadastroMenuItem_Click);
             // 
             // TimerHoraAtual
             // 
@@ -201,11 +95,12 @@ namespace Windows_App
             // lblHoraAtual
             // 
             this.lblHoraAtual.AutoSize = true;
-            this.lblHoraAtual.Location = new System.Drawing.Point(599, 9);
+            this.lblHoraAtual.Location = new System.Drawing.Point(539, 9);
             this.lblHoraAtual.Name = "lblHoraAtual";
             this.lblHoraAtual.Size = new System.Drawing.Size(200, 15);
             this.lblHoraAtual.TabIndex = 7;
             this.lblHoraAtual.Text = "Data/Hora atual: 00/00/0000 00:00:00";
+            this.lblHoraAtual.Click += new System.EventHandler(this.lblHoraAtual_Click);
             // 
             // Notify
             // 
@@ -220,23 +115,23 @@ namespace Windows_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 267);
+            this.ClientSize = new System.Drawing.Size(756, 403);
+            this.ControlBox = false;
             this.Controls.Add(this.lblHoraAtual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEstados);
             this.Controls.Add(this.lblUserState);
             this.Controls.Add(this.CboStatusUsuario);
             this.Controls.Add(this.lblMensagem);
-            this.Controls.Add(this.Menu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.Menu;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrincipal";
-            this.Text = "Principal";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.FrmNovoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
-            this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,23 +146,11 @@ namespace Windows_App
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem menuArquivo;
         private System.Windows.Forms.ToolStripMenuItem menuInfo;
-        private System.Windows.Forms.ToolStripMenuItem NovoMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Abrir;
-        private System.Windows.Forms.MenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem ArquivoMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ConteudoMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SairMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AjudaMenuItem;
         private System.Windows.Forms.Timer TimerHoraAtual;
         private System.Windows.Forms.Label lblHoraAtual;
-        private System.Windows.Forms.ToolStripMenuItem CadastroMenuItem;
         private System.Windows.Forms.NotifyIcon Notify;
     }
 }

@@ -94,5 +94,10 @@ namespace Windows_App
         {
 
         }
+
+        private void lblHoraAtual_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

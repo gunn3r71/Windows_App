@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using Windows_App.Classes;
 
 namespace Windows_App
 {
@@ -14,7 +15,7 @@ namespace Windows_App
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(MDISingleton.GetMDI());
         }
     }
 }

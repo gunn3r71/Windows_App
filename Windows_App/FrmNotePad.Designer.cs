@@ -66,11 +66,14 @@ namespace Windows_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.txtTexto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmNotePad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmNotePad";
             this.Load += new System.EventHandler(this.FrmNotePad_Load);
             this.ResumeLayout(false);
