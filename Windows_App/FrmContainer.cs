@@ -119,9 +119,22 @@ namespace Windows_App
 
         private void frmContainer_Load(object sender, EventArgs e)
         {
-            var pricipal = new FrmPrincipal();
-            pricipal.MdiParent = this;
+            var pricipal = new FrmPrincipal
+            {
+                MdiParent = this
+            };
             pricipal.Show();
+        }
+
+        private void TreeViewMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmTreeNode
+            {
+                MdiParent = MDISingleton.GetMDI(),
+                Width = 300,
+                Height = 300
+            };
+            frm.Show();
         }
     }
 }

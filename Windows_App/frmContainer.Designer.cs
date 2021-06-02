@@ -63,7 +63,7 @@ namespace Windows_App
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.CadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TreeViewMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -237,7 +237,7 @@ namespace Windows_App
             this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArquivoMenuItem,
             this.AjudaMenuItem,
-            this.CadastroMenuItem});
+            this.TreeViewMenuItem});
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(790, 24);
@@ -316,11 +316,12 @@ namespace Windows_App
             this.toolStripMenuItem3.Size = new System.Drawing.Size(127, 22);
             this.toolStripMenuItem3.Text = "&About...";
             // 
-            // CadastroMenuItem
+            // TreeViewMenuItem
             // 
-            this.CadastroMenuItem.Name = "CadastroMenuItem";
-            this.CadastroMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.CadastroMenuItem.Text = "Cadastro";
+            this.TreeViewMenuItem.Name = "TreeViewMenuItem";
+            this.TreeViewMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.TreeViewMenuItem.Text = "TreeView";
+            this.TreeViewMenuItem.Click += new System.EventHandler(this.TreeViewMenuItem_Click);
             // 
             // frmContainer
             // 
@@ -373,7 +374,7 @@ namespace Windows_App
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem CadastroMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TreeViewMenuItem;
     }
 }
 
